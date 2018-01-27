@@ -1,0 +1,21 @@
+roles:
+  - name: "root_admin"
+    assignments:
+      root:
+      - "*"
+  - name: "vertical_admin"
+    assignments:
+      "root:account:_vertical":
+        - view
+        - edit
+        - create
+      "root:company:_vertical":
+        - view
+        - edit
+        - create
+
+assignments:
+  1:
+    - vertical_admin
+  2:
+    - root_admin
